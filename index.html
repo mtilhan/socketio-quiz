@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+<html>
+<head>
+<title>test</title>
+</head>
+<script type="text/javascript">
+var socket = io.connect('http://localhost:8080');
+//socket.emit('testconnection');
+
+var randid=Math.floor(Math.random() * 9999);
+
+function submitname(form){
+ var username=form.name.value;
+ socket.emit('testconnection',username);
+}
+
+socket.on('testthis', function(data){
+	alert(data+"has joined.");
+});
+
+</script>
+
+<body>
+<form name='sendname' action='' method='get' />
+<input type='text' name='name' value='' />
+<input type='button' value='Enter name' onclick='submitname(this.form)' />
+</body>
+</html>

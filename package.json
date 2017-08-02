@@ -22,7 +22,9 @@
     "e2e-test": "samples test deploy"
   },
   "dependencies": {
-    "express": "4.15.3"
+    "express": "3.0.3",
+	"mysql":"2.0.0-alpha5",
+	"socket.io":"0.9.11"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "1.4.15"
