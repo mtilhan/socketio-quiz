@@ -15,11 +15,15 @@ server.listen(port);
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'localhost',
+  host     : ':/cloudsql/meteilhan-wp:europe-west1:meteilhan-sql2',
   user     : 'root',
-  password : '',
+  password : 'pPK212le7AEojLEz',
   database : 'quiz'
 });
+
+/*
+
+*/
 
 connection.connect();
 
